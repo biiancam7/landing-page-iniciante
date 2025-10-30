@@ -289,3 +289,33 @@ footer {
         text-align: center;
     }
 }
+
+/* ====================================================================== */
+/* 💬 7. BOTÃO FLUTUANTE DE WHATSAPP */
+/* ====================================================================== */
+
+.whatsapp-float {
+    /* Posição Fixa: CRUCIAL para ele "flutuar" enquanto a página rola */
+    position: fixed;
+    bottom: 25px; /* Distância da parte inferior */
+    right: 25px; /* Distância da lateral direita */
+    
+    /* Estilização */
+    background-color: #25D366; /* Verde oficial do WhatsApp (reconhecível) */
+    color: var(--cor-texto-claro);
+    font-size: 2.2em;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%; /* Faz o botão ser perfeitamente redondo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* Sombra para dar profundidade */
+    transition: var(--transicao-padrao);
+    z-index: 1000; /* Garante que fique acima de todos os outros elementos */
+}
+
+.whatsapp-float:hover {
+    background-color: #128C7E; /* Tom mais escuro no hover */
+    transform: scale(1.05) translateY(-2px); /* Efeito sutil de elevação */
+}
