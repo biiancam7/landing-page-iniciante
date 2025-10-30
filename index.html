@@ -3,34 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfólio de Bianca M., UX/UI Designer focada em criar experiências digitais intuitivas e centradas no usuário.">
     <title>Bianca M. - Designer & UX/UI Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css"> 
 </head>
 <body>
     <header>
         <h1>Bianca M.</h1>
-        <nav>
+        <nav class="main-nav">
             <a href="#sobre">Sobre Mim</a>
             <a href="#projetos">Projetos UX</a>
             <a href="#contato">Contato</a>
         </nav>
+        <button class="hamburger-menu" aria-label="Abrir menu de navegação" aria-expanded="false">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
     </header>
 
     <main>
         <section class="hero">
             <h2>Transformando Ideias em Experiências Digitais Incríveis.</h2>
-            <p>UX/UI Designer com foco em usabilidade e soluções centradas no usuário.</p>
-            <button>Ver Meus Projetos</button>
+            <p>Sou uma UX/UI Designer com foco em usabilidade e soluções centradas no usuário.</p>
+            <a href="#projetos" class="button primary">Ver Meus Projetos</a>
+        </section>
+
+        <section id="sobre" class="container">
+            <h3>Sobre Mim</h3>
+            <p>Aqui você pode escrever um parágrafo sobre sua paixão por design, suas habilidades, e como você aborda os projetos de UX/UI para resolver problemas reais.</p>
         </section>
 
         <section id="projetos" class="container">
-            <h3>Meus Trabalhos Recentes</h3>
-            <p>Esta seção será preenchida com os seus estudos de caso e projetos de UX.</p>
+            <h3>Meus Trabalhos Recentes em UX/UI</h3>
+            
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="image-square">
+                            <img src="https://picsum.photos/id/1015/400/400" alt="Exemplo de Projeto UX/UI 1">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="image-square">
+                            <img src="https://picsum.photos/id/1025/400/400" alt="Exemplo de Projeto UX/UI 2">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="image-square">
+                            <img src="https://picsum.photos/id/1033/400/400" alt="Exemplo de Projeto UX/UI 3">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="image-square">
+                            <img src="https://picsum.photos/id/1040/400/400" alt="Exemplo de Projeto UX/UI 4">
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </section>
+
+        <section id="contato" class="container">
+            <h3>Vamos Conversar?</h3>
+            <p>Estou aberta a novas oportunidades e colaborações. Entre em contato através do email <a href="mailto:seu-email@exemplo.com">seu-email@exemplo.com</a> ou me encontre nas redes sociais.</p>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 Bianca M. | Construído com HTML, CSS e Lógica.</p>
+        <div class="footer-content">
+            <p>&copy; 2025 Bianca M. | Todos os direitos reservados.</p>
+            <div class="social-links">
+                <a href="#" target="_blank" aria-label="LinkedIn" title="LinkedIn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                </a>
+                <a href="#" target="_blank" aria-label="GitHub" title="GitHub">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a7.38 7.38 0 0 0-4.82 0C8.73.65 7.55 1 7.55 1S7.45 3.25 7.45 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 12 18.13V22"></path></svg>
+                </a>
+                <a href="#" target="_blank" aria-label="Dribbble" title="Dribbble">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 4.66-13.89 3.85m16.89 1.99c-3.38-1.12-6.62-1.42-9.92.05"></path></svg>
+                </a>
+            </div>
+        </div>
     </footer>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </body>
 </html>

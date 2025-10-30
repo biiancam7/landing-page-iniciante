@@ -1,5 +1,12 @@
 # landing-page-iniciante
 Meu primeiro projeto de landing page para praticar HTML e CSS.
+
+## Dependências
+
+Este projeto utiliza a biblioteca [Swiper.js](https://swiperjs.com/) para criar o carrossel de projetos na seção "Meus Trabalhos Recentes". A biblioteca é importada via CDN no `index.html`.
+
+---
+
 ---
 
 ## 💾 Ciclo de Salvar e Enviar no Git
