@@ -1,0 +1,81 @@
+/* -------------------------------------- */
+/* 1. ESTILOS BASE E UX GERAL */
+/* -------------------------------------- */
+body {
+    /* Fonte limpa e profissional para UX */
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; 
+    margin: 0;
+    background-color: #f4f4f4; /* Fundo suave */
+    color: #333;
+    line-height: 1.6; /* Espaçamento ideal para leitura (UX) */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* -------------------------------------- */
+/* 2. CABEÇALHO E NAVEGAÇÃO */
+/* -------------------------------------- */
+header {
+    background-color: #1a1a1a; /* Fundo escuro elegante */
+    color: white;
+    padding: 1em 0;
+    display: flex; 
+    justify-content: space-around; 
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none; 
+    font-weight: 500;
+    transition: color 0.3s; /* Transição suave (UX) */
+}
+
+nav a:hover {
+    color: #007bff; /* Efeito ao passar o mouse */
+}
+
+/* -------------------------------------- */
+/* 3. SEÇÃO HERO (Destaque Principal) */
+/* -------------------------------------- */
+.hero {
+    padding: 80px 40px; 
+    text-align: center;
+    background-color: #ffffff;
+    margin: 40px 10%; 
+    border-radius: 12px; 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); 
+}
+
+.hero h2 {
+    font-size: 2.5em;
+    color: #1a1a1a;
+}
+
+.hero button {
+    background-color: #007bff; 
+    color: white;
+    padding: 15px 30px; 
+    border: none;
+    border-radius: 50px; /* Borda redonda, moderno e chamativo */
+    cursor: pointer;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: 30px;
+    transition: background-color 0.3s ease; 
+}
+
+.hero button:hover {
+    background-color: #0056b3; 
+}
