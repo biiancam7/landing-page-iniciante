@@ -1,13 +1,41 @@
-/* -------------------------------------- */
-/* 1. ESTILOS BASE E UX GERAL */
-/* -------------------------------------- */
+/* ====================================================================== */
+/* 🎨 1. BASE E DESIGN SYSTEM */
+/* ====================================================================== */
+
+:root {
+    /* Cores principais */
+    --cor-primaria: #0A192F;       /* Azul petróleo */
+    --cor-secundaria: #4A4E69;     /* Cinza azulado escuro */
+    --cor-destaque: #6A00FF;       /* Roxo vibrante */
+    --cor-realce: #00FFFF;         /* Ciano elétrico */
+    --cor-fundo-claro: #F5F5F5;    /* Branco sujo / Off-white */
+    --cor-texto-escuro: #1A1A1A;
+    --cor-texto-claro: #FFFFFF;
+
+    /* Tipografia e espaçamento */
+    --fonte-principal: 'Inter', sans-serif;
+    --peso-titulo: 700;
+    --peso-texto: 400;
+    --altura-linha: 1.7;
+
+    /* Bordas e sombras */
+    --raio-borda: 8px;
+    --sombra-suave: 0 4px 12px rgba(0, 0, 0, 0.05);
+    --sombra-intensa: 0 10px 30px rgba(0, 0, 0, 0.3);
+
+    /* Transições */
+    --transicao-padrao: all 0.3s ease;
+}
+
 body {
-    font-family: 'Inter', sans-serif; /* Fonte moderna e limpa */
+    font-family: var(--fonte-principal);
+    color: var(--cor-texto-escuro);
+    background-color: var(--cor-fundo-claro);
     margin: 0;
-    background-color: #f9f9f9; /* Fundo quase branco, muito sutil */
-    color: #1a1a1a; /* Texto mais escuro para contraste */
-    line-height: 1.7; /* Espaçamento ideal para leitura */
-    font-weight: 400;
+    line-height: var(--altura-linha);
+    font-weight: var(--peso-texto);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
 }
 
 .container {
@@ -16,162 +44,157 @@ body {
     padding: 40px 20px;
 }
 
-/* -------------------------------------- */
-/* 2. CABEÇALHO E NAVEGAÇÃO */
-/* -------------------------------------- */
+/* ====================================================================== */
+/* 🧭 2. CABEÇALHO E NAVEGAÇÃO */
+/* ====================================================================== */
+
 header {
-    background-color: #ffffff; /* Fundo branco */
-    color: #1a1a1a; /* Texto escuro */
-    padding: 1.2em 40px; /* Mais padding */
-    display: flex; 
-    justify-content: space-between; /* Alinha logo à esquerda, nav à direita */
+    background-color: #FFF;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05);
+    padding: 1.2em 40px;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05); /* Sombra mais sutil, quase uma linha */
+    position: relative;
+    z-index: 100;
 }
 
 header h1 {
     margin: 0;
-    font-size: 1.5em;
+    font-size: 1.6em;
+    font-weight: var(--peso-titulo);
 }
 
-.hamburger-menu {
-    display: none; /* Escondido em telas grandes */
-    background: none;
-    border: none;
-    cursor: pointer;
-}
-
-header h1 a { /* Adiciona estilo ao h1 se ele for um link */
-    color: #1a1a1a;
+header h1 a {
+    color: var(--cor-texto-escuro);
     text-decoration: none;
+    transition: var(--transicao-padrao);
+}
+
+header h1 a:hover {
+    color: var(--cor-destaque);
 }
 
 nav a {
-    color: #555; /* Cor de link mais suave */
+    color: #555;
     margin: 0 15px;
-    text-decoration: none; 
-    font-weight: 500; /* Peso da fonte */
-    transition: color 0.3s; /* Transição suave (UX) */
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transicao-padrao);
 }
 
 nav a:hover {
-    color: #0070f3; /* Azul mais vibrante no hover */
+    color: var(--cor-destaque);
 }
 
-/* -------------------------------------- */
-/* 3. SEÇÃO HERO (Destaque Principal) */
-/* -------------------------------------- */
+.hamburger-menu {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5em;
+}
+
+/* ====================================================================== */
+/* 🚀 3. HERO SECTION (PRINCIPAL) */
+/* ====================================================================== */
+
 .hero {
-    padding: 100px 40px; /* Mais padding vertical */
-    text-align: center;
-    background-color: #ffffff;
-    margin: 0; /* Remove margens laterais */
-    border-radius: 0; /* Remove borda arredondada */
-    box-shadow: none; /* Remove sombra */
+    background-color: var(--cor-primaria);
+    color: var(--cor-texto-claro);
+    padding: 100px 20px;
 }
 
-.hero h2 {
-    font-size: 2.5em;
-    color: #1a1a1a;
-    max-width: 800px; /* Limita a largura do título para melhor leitura */
-    margin: 0 auto 20px auto;
+.hero-content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.hero h1 {
+    font-size: 3.2em;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    color: var(--cor-texto-claro);
 }
 
 .hero p {
-    font-size: 1.1em;
-    color: #555;
-    max-width: 700px; /* Limita a largura do parágrafo */
-    margin: 0 auto 40px auto;
+    font-size: 1.25em;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 40px;
 }
 
-/* Estilo para botões genéricos */
+/* Botão principal */
+.hero button,
+.button.primary {
+    background: linear-gradient(45deg, var(--cor-destaque), var(--cor-realce));
+    color: var(--cor-texto-claro);
+    border: none;
+    padding: 15px 35px;
+    border-radius: var(--raio-borda);
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: 600;
+    transition: var(--transicao-padrao);
+    box-shadow: var(--sombra-suave);
+}
+
+.hero button:hover,
+.button.primary:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+/* Placeholder da imagem/mockup */
+.hero-image-placeholder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mockup-box {
+    width: 100%;
+    height: 350px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--raio-borda);
+    box-shadow: var(--sombra-intensa);
+}
+
+/* ====================================================================== */
+/* ⚙️ 4. BOTÕES GENÉRICOS */
+/* ====================================================================== */
+
 .button {
     display: inline-block;
     padding: 12px 25px;
-    border: none;
-    border-radius: 6px; /* Borda levemente arredondada */
+    border-radius: var(--raio-borda);
+    font-weight: 600;
     cursor: pointer;
-    font-size: 1em;
-    font-weight: bold;
-    transition: background-color 0.2s ease, color 0.2s ease;
+    transition: var(--transicao-padrao);
 }
 
-.button.primary {
-    background-color: #0070f3; /* Azul primário */
-    color: #ffffff;
+.button.secondary {
+    background-color: #EEE;
+    color: var(--cor-primaria);
 }
 
-.button.primary:hover {
-    background-color: #0056b3; /* Azul mais escuro no hover */
+.button.secondary:hover {
+    background-color: #DDD;
 }
 
-/* -------------------------------------- */
-/* 4. ESTILOS DO CARROSSEL (SWIPER) */
-/* -------------------------------------- */
-.swiper-container {
-    width: 100%;
-    height: 300px; /* Altura do carrossel, ajuste conforme necessário */
-    margin-top: 20px;
-    /* Adicione um pouco de padding para os botões de navegação não ficarem colados */
-    padding: 0 50px; 
-    box-sizing: border-box; /* Garante que o padding não aumente a largura total */
-}
+/* ====================================================================== */
+/* 🧱 5. RODAPÉ */
+/* ====================================================================== */
 
-.swiper-slide {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #ffffff; /* Fundo branco para cada slide */
-    border-radius: 6px; /* Borda levemente arredondada */
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05); /* Sombra muito sutil */
-}
-
-.image-square {
-    width: 250px; /* Largura fixa para o quadrado */
-    height: 250px; /* Altura fixa para o quadrado */
-    overflow: hidden; /* Garante que a imagem não transborde */
-    border-radius: 8px; /* Borda arredondada para o quadrado */
-    display: flex; /* Para centralizar a imagem se ela for menor */
-    justify-content: center;
-    align-items: center;
-    background-color: #eee; /* Cor de fundo para o caso da imagem não carregar */
-}
-
-.image-square img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Garante que a imagem cubra o quadrado sem distorcer */
-    display: block; /* Remove espaço extra abaixo da imagem */
-}
-
-/* Estilos para os botões de navegação do Swiper */
-.swiper-button-next,
-.swiper-button-prev { /* Botões de navegação mais discretos */
-    color: #888; /* Cor cinza suave */
-    background-color: rgba(255, 255, 255, 0.8); /* Fundo semi-transparente */
-    border-radius: 50%; /* Redondo */
-    width: 40px; /* Tamanho */
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: color 0.2s ease, background-color 0.2s ease;
-}
-
-.swiper-button-next:hover,
-.swiper-button-prev:hover {
-    color: #0070f3; /* Azul no hover */
-    background-color: rgba(255, 255, 255, 1);
-}
-
-/* -------------------------------------- */
-/* 5. ESTILOS DO RODAPÉ */
-/* -------------------------------------- */
 footer {
-    background-color: #ffffff;
+    background-color: #FFF;
     border-top: 1px solid rgba(0, 0, 0, 0.05);
-    padding: 30px 40px;
-    margin-top: 60px;
+    padding: 40px;
+    margin-top: 80px;
 }
 
 .footer-content {
@@ -180,62 +203,66 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .footer-content p {
-    margin: 0;
     color: #555;
+    margin: 0;
 }
 
 .social-links a {
     color: #555;
     margin-left: 20px;
-    transition: color 0.2s ease;
+    transition: var(--transicao-padrao);
 }
 
 .social-links a:hover {
-    color: #0070f3; /* Azul primário no hover */
+    color: var(--cor-destaque);
 }
 
-/* -------------------------------------- */
-/* 6. ESTILOS RESPONSIVOS (MOBILE) */
-/* -------------------------------------- */
+/* ====================================================================== */
+/* 📱 6. RESPONSIVIDADE */
+/* ====================================================================== */
+
+@media (max-width: 1024px) {
+    .hero-content-grid {
+        gap: 40px;
+    }
+}
+
 @media (max-width: 768px) {
-    /* Ajustes gerais */
     .container {
         padding: 30px 15px;
     }
 
-    /* Cabeçalho e Navegação Mobile */
     header {
         padding: 1em 15px;
     }
 
     .hamburger-menu {
-        display: block; /* Mostra o botão em telas pequenas */
-        z-index: 1001; /* Garante que fique acima de outros elementos */
-        color: #1a1a1a;
+        display: block;
+        color: var(--cor-texto-escuro);
     }
 
     .main-nav {
-        position: fixed; /* Menu fica fixo na tela */
+        position: fixed;
         top: 0;
-        right: -100%; /* Começa fora da tela */
+        right: -100%;
         width: 80%;
-        height: 100vh; /* Altura total da tela */
-        background-color: #ffffff;
-        box-shadow: -2px 0 10px rgba(0,0,0,0.1);
-        
+        height: 100vh;
+        background-color: #FFF;
+        box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        transition: right 0.4s ease-in-out;
-        z-index: 1000;
+        transition: right 0.4s ease;
     }
 
     .main-nav.is-active {
-        right: 0; /* Puxa o menu para dentro da tela */
+        right: 0;
     }
 
     .main-nav a {
@@ -243,29 +270,22 @@ footer {
         font-size: 1.2em;
     }
 
-    /* Seção Hero Mobile */
-    .hero {
-        padding: 60px 20px;
+    .hero-content-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
     }
 
-    .hero h2 {
-        font-size: 2em;
+    .hero h1 {
+        font-size: 2.2em;
     }
 
-    /* Carrossel Mobile */
-    .swiper-container {
+    .mockup-box {
+        margin-top: 30px;
         height: 250px;
-        padding: 0 15px;
     }
 
-    .image-square {
-        width: 200px;
-        height: 200px;
-    }
-
-    /* Rodapé Mobile */
     .footer-content {
         flex-direction: column;
-        gap: 20px; /* Espaço entre os itens empilhados */
+        text-align: center;
     }
 }

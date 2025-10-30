@@ -13,7 +13,6 @@
         <h1>Bianca M.</h1>
         <nav class="main-nav">
             <a href="#sobre">Sobre Mim</a>
-            <a href="#projetos">Projetos UX</a>
             <a href="#contato">Contato</a>
         </nav>
         <button class="hamburger-menu" aria-label="Abrir menu de navegação" aria-expanded="false">
@@ -22,47 +21,27 @@
     </header>
 
     <main>
-        <section class="hero">
-            <h2>Transformando Ideias em Experiências Digitais Incríveis.</h2>
-            <p>Sou uma UX/UI Designer com foco em usabilidade e soluções centradas no usuário.</p>
-            <a href="#projetos" class="button primary">Ver Meus Projetos</a>
+        <section id="hero" class="hero">
+            <div class="hero-content-grid">
+                
+                <div class="hero-text">
+                    <h1>Crie Experiências, Codifique o Futuro.</h1>
+                    <p>Seu portfólio de Designer e Desenvolvedor. Aplico a lógica de programação para resolver problemas de UX complexos.</p>
+                    <button onclick="document.getElementById('projetos').scrollIntoView();">Ver Meus Projetos</button>
+                </div>
+
+                <div class="hero-image-placeholder">
+                    <div class="mockup-box"></div>
+                </div>
+                
+            </div>
         </section>
+
+
 
         <section id="sobre" class="container">
             <h3>Sobre Mim</h3>
             <p>Aqui você pode escrever um parágrafo sobre sua paixão por design, suas habilidades, e como você aborda os projetos de UX/UI para resolver problemas reais.</p>
-        </section>
-
-        <section id="projetos" class="container">
-            <h3>Meus Trabalhos Recentes em UX/UI</h3>
-            
-            <div class="swiper-container">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="image-square">
-                            <img src="https://picsum.photos/id/1015/400/400" alt="Exemplo de Projeto UX/UI 1">
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="image-square">
-                            <img src="https://picsum.photos/id/1025/400/400" alt="Exemplo de Projeto UX/UI 2">
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="image-square">
-                            <img src="https://picsum.photos/id/1033/400/400" alt="Exemplo de Projeto UX/UI 3">
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="image-square">
-                            <img src="https://picsum.photos/id/1040/400/400" alt="Exemplo de Projeto UX/UI 4">
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-pagination"></div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-            </div>
         </section>
 
         <section id="contato" class="container">
@@ -88,7 +67,5 @@
         </div>
     </footer>
     <script src="script.js" defer></script>
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </body>
 </html>
